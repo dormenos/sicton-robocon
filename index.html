@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="mn">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SICTON Robocon Team — Танилцуулга</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo"><img src="assets/logo blue.png" alt="SICTON Robocon Logo"></div>
+        <span>SICTON Robocon</span>
+      </div>
+      <a class="hamb" href="#" id="hamb">☰ Цэс</a>
+      <nav>
+        <ul>
+          <li><a href="#about">Танилцуулга</a></li>
+          <li><a href="#rules">ABU Robocon</a></li>
+          <li><a href="#robots">Роботууд</a></li>
+          <li><a href="#timeline">Хөтөлбөр</a></li>
+          <li><a href="#gallery">Галерей</a></li>
+          <li><a href="#sponsors">Дэмжигчид</a></li>
+          <li><a href="#contact" class="btn">Холбоо барих</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div>
+        <div class="kicker"><span class="dot"></span>Robocon бол инженерчлэлийн баяр</div>
+        <h1>Бид тоглоом биш, систем бүтээдэг. <br>Хамтдаа Монгол инженерүүдийн ирээдүйг кодлоё.</h1>
+        <p>SICTON Robocon баг нь механик, электроник, програм хангамжийг нэгтгэсэн бүтээлч робот системүүдийг зохион бүтээж, олон улсын ABU Robocon–д оролцох зорилготой.</p>
+        <a href="#about" class="btn">Багийн тухай</a>
+        <div class="statgrid">
+          <div class="stat"><b>20+ </b><div>Гишүүд</div></div>
+          <div class="stat"><b>8 сар</b><div>Бэлтгэлийн цикл</div></div>
+          <div class="stat"><b>2 робот</b><div>Автомат + Гар удирдлагатай</div></div>
+        </div>
+      </div>
+      <div class="imgwrap">
+        <img src="assets/UNDESNYAVARGATUG.jpg" alt="robotics-hero">
+      </div>
+    </div>
+  </section>
+
+  <!-- About + Rules -->
+  <section id="about">
+    <div class="container grid-2">
+      <div class="panel">
+        <h2>Танилцуулга</h2>
+        <p class="lead">Бидний багт механик зохион бүтээгч, схем дизайнч, суурь программист хүртэл цогцолж — нэг зорилгод нэгддэг.</p>
+        <ul>
+          <li>Механик: CAD (Fusion 360), 3D хэвлэл, CNC</li>
+          <li>Электроник: STM32, ESP32, мотор драйвер, мэдрүүр</li>
+          <li>Програм: C/C++, Python, ROS2, OpenCV/YOLO</li>
+          <li>Сорил: Unit test, HIL, талбайн туршилт</li>
+        </ul>
+      </div>
+      <div id="rules" class="panel">
+        <h2>ABU Robocon юу вэ?</h2>
+        <p>ABU Robocon нь Ази–Номхон далайн орны инженер оюутнууд робот бүтээж, тухайн жилийн дүрмээр тэмцдэг тэмцээн. Жил бүрийн даалгавар өөр сэдэвтэй байдаг.</p>
+        <ol>
+          <li>Тухайн жилийн дүрэм, онооны системийг судална</li>
+          <li>Стратеги сонголт: хурд, нарийвчлал, найдвартай байдал</li>
+          <li>Роботын архитектур: механик + электроник + софт</li>
+          <li>Талбайн дасгал, параметр тюнинг, лог шинжилгээ</li>
+        </ol>
+        <p class="lead">Манай зорилго: <b>Fast, Robust, Repeatable</b>.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Robots -->
+  <section id="robots">
+    <div class="container">
+      <h2>Роботууд</h2>
+      <p class="lead">Автомат & Гар удирдлагатай роботуудын богино танилцуулга.</p>
+      <div class="cards">
+        <div class="card">
+          <span class="badge">Autonomous</span>
+          <h3>Orion A1</h3>
+          <p>STM32F407 + Jetson Orin Nano, ROS2 Humble, дифференциал жолоодлого, YOLOv8 дүр танилт, киллер фичер — 100ms доорх pipeline.</p>
+          <ul>
+            <li>Drive: Omni/Дифференциал (модульчлагдсан)</li>
+            <li>Perception: RGB-D + IMU + одометр</li>
+            <li>Control: PID + LQR тюнинг</li>
+          </ul>
+        </div>
+        <div class="card">
+          <span class="badge" style="background:var(--acc2)">Manual</span>
+          <h3>Atlas M2</h3>
+          <p>ESP32 + PS5 controller (BLE), VNH5019 драйвер, хурд/эргэлтийн хаалттай цикл; хурдан, хүчтэй, эвдэрдгийг засахад хялбар.</p>
+          <ul>
+            <li>Torque: 24V BLDC + planetary gearbox</li>
+            <li>Safety: E-stop, current limit</li>
+            <li>Swap: 3 минутын модуль солих</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>  
+
+  <!-- Timeline -->
+  <section id="timeline">
+    <div class="container">
+      <h2>Бэлтгэлийн төлөвлөгөө</h2>
+      <div class="panel timeline">
+        <div class="tl-item"><b>IX–X сар:</b> Дүрэм судлах, системийн загвар, BOM батлах</div>
+        <div class="tl-item"><b>XI–I сар:</b> Механик үйлдвэрлэл, электроник угсралт</div>
+        <div class="tl-item"><b>II–III сар:</b> Firmware/Алгоритм, талбайн тохиргоо</div>
+        <div class="tl-item"><b>IV сар:</b> Туршилт, найдвартай байдлын тест, лог анализ</div>
+        <div class="tl-item"><b>V сар:</b> Үндэсний шалгаруулалт</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery">
+    <div class="container">
+      <h2>Галерей</h2>
+      <p class="lead">Туршилт, прототип, талбайн мөчүүд.</p>
+      <div class="gallery">
+        <img src="assets/UNDESNYAVARGA3.jpg" alt="gallery-1" onclick="openLightbox(this.src)">
+        <img src="assets/OLONULSSHAGNALBUGD.jpg" alt="gallery-2" onclick="openLightbox(this.src)">
+        <img src="assets/1RBAGYNROBOT.jpg" alt="gallery-3" onclick="openLightbox(this.src)">
+        <img src="assets/SHAGNALGARDUULAHUE.jpg" alt="gallery-4" onclick="openLightbox(this.src)">
+        <img src="assets/2RBAGYNROBOT.jpg" alt="gallery-5" onclick="openLightbox(this.src)">
+        <img src="assets/2RBAGTOGLOLTEHLEL.jpg" alt="gallery-6" onclick="openLightbox(this.src)">
+        <img src="assets/UNDESNYAVARGA2.jpg" alt="gallery-7" onclick="openLightbox(this.src)">
+        <img src="assets/UNDESNYAVARGA.jpg" alt="gallery-8" onclick="openLightbox(this.src)">
+      </div>
+    </div>
+    <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+      <img id="lightboxImg" alt="lightbox">
+    </div>
+  </section>
+
+  <!-- Sponsors -->
+  <section id="sponsors">
+    <div class="container">
+      <h2>Дэмжигч байгууллагууд</h2>
+      <div class="spons">
+       <!-- <div class="logo">MUST SICT</div> 
+        <div class="logo">Pololu</div>
+        <div class="logo">NVIDIA</div>
+        <div class="logo">STMicro</div>
+        <div class="logo">Espressif</div> -->
+      </div>
+    </div>
+  </section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container grid-2">
+    <!-- Зүүн тал: Form -->
+    <div>
+      <h2>Холбоо барих</h2>
+      <p class="lead">Хамтын ажиллагаа, ивээн тэтгэгч санал, багт элсэх хүсэлт илгээнэ үү.</p>
+
+      <!-- Formspree рүү POST хийдэг бодит form -->
+      <form action="https://formspree.io/f/mrboeqgr" method="POST">
+        <input required name="name" placeholder="Нэр" aria-label="Нэр">
+        <input required name="email" type="email" placeholder="Имэйл" aria-label="Имэйл">
+
+        <textarea name="message" rows="5" placeholder="Таны мессеж" aria-label="Таны мессеж"></textarea>
+
+        <!-- Нэмэлт: имэйл subject (Formspree-д харагдана) -->
+        <input type="hidden" name="_subject" value="SICTON Robocon — Холбоо барих">
+
+        <!-- Spam honeypot (ботуудаас хамгаална) -->
+        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+        <!-- Илгээсний дараах redirect (хүсвэл үлдээ, эсвэл устгаж болно) -->
+        <input type="hidden" name="_redirect" value="https://tanidomain.github.io/thanks.html">
+
+        <button class="btn" type="submit">Илгээх</button>
+      </form>
+    </div>
+
+    <!-- Баруун тал: мэдээлэл -->
+    <div class="panel">
+      <b>Байршил:</b> Мэдээлэл Холбоо Технологийн сургууль<br>
+      <b>Холбогдох утас:</b> +976 88983162<br>
+      <b>Сошиал хаяг:</b> <a href="https://www.instagram.com/must_sicton/">Instagram</a>
+      <hr style="border-color:rgba(255,255,255,.06)">
+      <p class="lead">Бид дизайн баримт бичиг, кодын сан, лог датаа нээлттэй байдлаар хуваалцахыг зорьдог.</p>
+    </div>
+  </div>
+</section>
+
+
+
+  <footer>
+    <div class="container">© <span id="y"></span> SICTON Robocon — Бүгдийн хүчээр боломжгүйг бүтээнэ.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

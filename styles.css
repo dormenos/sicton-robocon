@@ -1,0 +1,84 @@
+:root{
+  --bg:#0b0d12; --panel:#111420; --muted:#8a93a6; --text:#e6e9f2; --acc:#64d2ff; --acc2:#7df9a6;
+  --ring: 0 0 0 3px rgba(100,210,255,.25);
+}
+*{box-sizing:border-box}
+html,body{margin:0}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; background:var(--bg); color:var(--text); line-height:1.6}
+a{color:inherit; text-decoration:none}
+img{max-width:100%; display:block}
+.container{width:min(1100px,100%); margin:0 auto; padding:0 16px}
+.btn{display:inline-block; padding:12px 18px; border-radius:14px; background:linear-gradient(135deg,var(--acc),var(--acc2)); color:#001017; font-weight:700; box-shadow:0 6px 24px rgba(100,210,255,.25); transition:transform .15s ease, box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px); box-shadow:0 10px 26px rgba(125,249,166,.25)}
+
+/* Header */
+header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(1.2) blur(8px); background:rgba(11,13,18,.65); border-bottom:1px solid rgba(255,255,255,.06)}
+.nav{display:flex; align-items:center; justify-content:space-between; padding:10px 0}
+.brand{display:flex; align-items:center; gap:10px}
+.brand .logo{width:38px; height:38px; border-radius:12px; background:linear-gradient(135deg,var(--acc),var(--acc2)); display:grid; place-items:center; font-weight:800; color:#001017}
+.brand span{font-weight:800; letter-spacing:.3px}
+nav ul{display:flex; gap:18px; list-style:none; margin:0; padding:0}
+nav a{padding:8px 10px; border-radius:10px; color:var(--muted)}
+nav a:hover{background:rgba(255,255,255,.06); color:var(--text)}
+.hamb{display:none; border:1px solid rgba(255,255,255,.12); padding:8px 10px; border-radius:10px}
+
+/* Hero */
+.hero{position:relative; overflow:hidden; padding:72px 0 48px; background:radial-gradient(1200px 500px at 10% -10%, rgba(100,210,255,.15), transparent 60%), radial-gradient(900px 400px at 90% -20%, rgba(125,249,166,.12), transparent 60%)}
+.hero-grid{display:grid; grid-template-columns:1.2fr 1fr; gap:28px; align-items:center}
+.kicker{display:inline-flex; gap:10px; align-items:center; color:var(--muted); background:rgba(255,255,255,.04); padding:6px 10px; border:1px solid rgba(255,255,255,.08); border-radius:999px; font-size:12px}
+.kicker .dot{width:6px; height:6px; border-radius:999px; background:var(--acc2)}
+.hero h1{font-size:clamp(28px,5vw,48px); line-height:1.12; margin:10px 0}
+.hero p{color:#c7cedd; margin:0 0 20px}
+.hero .statgrid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin-top:18px}
+.stat{background:rgba(255,255,255,.04); border:1px solid rgba(255,255,255,.08); padding:14px; border-radius:16px; text-align:center}
+.stat b{font-size:20px}
+.hero .imgwrap{border-radius:18px; overflow:hidden; border:1px solid rgba(255,255,255,.06); box-shadow:0 20px 60px rgba(0,0,0,.45)}
+
+/* Sections */
+section{padding:56px 0; border-top:1px solid rgba(255,255,255,.06)}
+section h2{font-size:clamp(22px,3.2vw,32px); margin:0 0 10px}
+section p.lead{color:#c7cedd}
+.panel{background:var(--panel); border:1px solid rgba(255,255,255,.06); border-radius:18px; padding:18px}
+
+/* About + Rules */
+.grid-2{display:grid; grid-template-columns:1fr 1fr; gap:18px}
+
+/* Robots */
+.cards{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+.card{border:1px solid rgba(255,255,255,.08); background:rgba(255,255,255,.03); padding:16px; border-radius:16px}
+.badge{display:inline-block; font-size:12px; color:#001017; background:var(--acc); padding:4px 8px; border-radius:999px; font-weight:700}
+
+/* Timeline */
+.timeline{position:relative; margin-left:8px; padding-left:18px}
+.timeline::before{content:""; position:absolute; left:0; top:6px; bottom:6px; width:2px; background:linear-gradient(var(--acc), transparent)}
+.tl-item{margin:10px 0}
+.tl-item b{display:block}
+
+/* Gallery */
+.gallery{display:grid; grid-template-columns:repeat(4,1fr); gap:10px}
+.gallery img{border-radius:12px; cursor:zoom-in; border:1px solid rgba(255,255,255,.08)}
+.lightbox{position:fixed; inset:0; background:rgba(0,0,0,.8); display:none; align-items:center; justify-content:center; z-index:100}
+.lightbox img{max-width:min(92vw,1200px); max-height:86vh; border-radius:16px}
+
+/* Sponsors */
+.spons{display:grid; grid-template-columns:repeat(5,1fr); gap:10px; align-items:center}
+.spons .logo{background:rgba(255,255,255,.05); border:1px solid rgba(255,255,255,.08); border-radius:14px; padding:16px; text-align:center; font-weight:700; color:#c7cedd}
+
+/* Contact */
+form{display:grid; gap:12px}
+input,textarea{background:#0f1320; border:1px solid rgba(255,255,255,.08); color:var(--text); border-radius:12px; padding:12px}
+input:focus,textarea:focus{outline:none; box-shadow:var(--ring); border-color:var(--acc)}
+
+/* Footer */
+footer{padding:32px 0; color:#9aa3b8; border-top:1px solid rgba(255,255,255,.06)}
+
+/* Responsive */
+@media (max-width:900px){
+  .hero-grid, .grid-2{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr 1fr}
+  .gallery{grid-template-columns:1fr 1fr}
+  .spons{grid-template-columns:1fr 1fr 1fr}
+  nav ul{display:none}
+  .hamb{display:block}
+  .mobile-open nav ul{display:flex; flex-direction:column; position:absolute; right:16px; top:64px; background:rgba(17,20,32,.95); border:1px solid rgba(255,255,255,.08); border-radius:12px; padding:10px; gap:6px; width:min(240px, calc(100vw - 32px))}
+}
