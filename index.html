@@ -11,14 +11,12 @@
   <!-- Header -->
   <header>
     <div class="container nav">
-      <div class="brand">
-        <div class="logo"><img src="assets/logo blue.png" alt="SICTON Robocon Logo"></div>
-        <span>SICTON Robocon</span>
-      </div>
+        <div class="logo"><img src="assets/logo black.png" alt="SICTON Robocon Logo"></div>
       <a class="hamb" href="#" id="hamb">☰ Цэс</a>
       <nav>
         <ul>
           <li><a href="#about">Танилцуулга</a></li>
+          <li><a href="#rewards">Шагналууд</a></li>
           <li><a href="#rules">ABU Robocon</a></li>
           <li><a href="#robots">Роботууд</a></li>
           <li><a href="#timeline">Хөтөлбөр</a></li>
@@ -52,10 +50,10 @@
 
   <!-- About + Rules -->
   <section id="about">
-    <div class="container grid-2">
+    <div class="container grid-3">
       <div class="panel">
         <h2>Танилцуулга</h2>
-        <p class="lead">Бидний багт механик зохион бүтээгч, схем дизайнч, суурь программист хүртэл цогцолж — нэг зорилгод нэгддэг.</p>
+        <p class="lead">ШУТИС-МХТС-ийн SICTON робокон баг нь 2001 онд байгуулагдан, жил бүр Азийн болон Номхон далайн бүсийн улс орнуудын дунд зохион байгуулагддаг ABU Robocon тэмцээнд МХТС-ийг төлөөлж оролцдог.</p>
         <ul>
           <li>Механик: CAD (Fusion 360), 3D хэвлэл, CNC</li>
           <li>Электроник: STM32, ESP32, мотор драйвер, мэдрүүр</li>
@@ -63,16 +61,24 @@
           <li>Сорил: Unit test, HIL, талбайн туршилт</li>
         </ul>
       </div>
+      <div id="rewards" class="panel">
+        <h2>Шагналууд</h2>
+        <p class="lead">Энэ жил бид үндэсний тэмцээнд түрүүлж, Улаанбаатар хотноо зохион байгуулагдсан ABU Robocon-д амжилттай оролцож дараах шагналуудыг хүртсэн:</p>
+        <ul>
+          <li>2-р баг: “Second runner up”</li>
+          <li>1-р баг: “Panasonic award”</li>
+          <li>2-р багийн ахлагч Б. Хулан: “MVP award”</li>
+        </ul>
+      </div>
       <div id="rules" class="panel">
         <h2>ABU Robocon юу вэ?</h2>
         <p>ABU Robocon нь Ази–Номхон далайн орны инженер оюутнууд робот бүтээж, тухайн жилийн дүрмээр тэмцдэг тэмцээн. Жил бүрийн даалгавар өөр сэдэвтэй байдаг.</p>
-        <ol>
-          <li>Тухайн жилийн дүрэм, онооны системийг судална</li>
-          <li>Стратеги сонголт: хурд, нарийвчлал, найдвартай байдал</li>
-          <li>Роботын архитектур: механик + электроник + софт</li>
-          <li>Талбайн дасгал, параметр тюнинг, лог шинжилгээ</li>
-        </ol>
-        <p class="lead">Манай зорилго: <b>Fast, Robust, Repeatable</b>.</p>
+        <ul>
+          <li>Дүрэм, онооны системийг судлах</li>
+          <li>Стратеги: хурд, нарийвчлал, найдвартай байдал</li>
+          <li>Архитектур: механик + электроник + софт</li>
+          <li>Талбайн дасгал, тюнинг, лог шинжилгээ</li>
+        </ul>
       </div>
     </div>
   </section>
@@ -86,7 +92,7 @@
         <div class="card">
           <span class="badge">Autonomous</span>
           <h3>Orion A1</h3>
-          <p>STM32F407 + Jetson Orin Nano, ROS2 Humble, дифференциал жолоодлого, YOLOv8 дүр танилт, киллер фичер — 100ms доорх pipeline.</p>
+          <p>STM32F407 + Jetson Orin Nano, ROS2 Humble, дифференциал жолоодлого, YOLOv8 дүр танилт; 100ms доорх pipeline.</p>
           <ul>
             <li>Drive: Omni/Дифференциал (модульчлагдсан)</li>
             <li>Perception: RGB-D + IMU + одометр</li>
@@ -96,7 +102,7 @@
         <div class="card">
           <span class="badge" style="background:var(--acc2)">Manual</span>
           <h3>Atlas M2</h3>
-          <p>ESP32 + PS5 controller (BLE), VNH5019 драйвер, хурд/эргэлтийн хаалттай цикл; хурдан, хүчтэй, эвдэрдгийг засахад хялбар.</p>
+          <p>ESP32 + PS5 controller (BLE), VNH5019 драйвер, хурд/эргэлтийн хаалттай цикл; солиход хялбар модуль.</p>
           <ul>
             <li>Torque: 24V BLDC + planetary gearbox</li>
             <li>Safety: E-stop, current limit</li>
@@ -105,7 +111,7 @@
         </div>
       </div>
     </div>
-  </section>  
+  </section>
 
   <!-- Timeline -->
   <section id="timeline">
@@ -147,55 +153,46 @@
     <div class="container">
       <h2>Дэмжигч байгууллагууд</h2>
       <div class="spons">
-       <!-- <div class="logo">MUST SICT</div> 
-        <div class="logo">Pololu</div>
-        <div class="logo">NVIDIA</div>
-        <div class="logo">STMicro</div>
-        <div class="logo">Espressif</div> -->
+        <!-- лого орно -->
       </div>
     </div>
   </section>
 
-<!-- Contact -->
-<section id="contact">
-  <div class="container grid-2">
-    <!-- Зүүн тал: Form -->
-    <div>
-      <h2>Холбоо барих</h2>
-      <p class="lead">Хамтын ажиллагаа, ивээн тэтгэгч санал, багт элсэх хүсэлт илгээнэ үү.</p>
+  <!-- Contact -->
+  <section id="contact">
+    <div class="container grid-2">
+      <!-- Зүүн тал: Form -->
+      <div>
+        <h2>Холбоо барих</h2>
+        <p class="lead">Хамтын ажиллагаа, ивээн тэтгэгч санал, багт элсэх хүсэлт илгээнэ үү.</p>
 
-      <!-- Formspree рүү POST хийдэг бодит form -->
-      <form action="https://formspree.io/f/mrboeqgr" method="POST">
-        <input required name="name" placeholder="Нэр" aria-label="Нэр">
-        <input required name="email" type="email" placeholder="Имэйл" aria-label="Имэйл">
+        <form action="https://formspree.io/f/mrboeqgr" method="POST">
+          <input required name="name" placeholder="Нэр" aria-label="Нэр">
+          <input required name="email" type="email" placeholder="Имэйл" aria-label="Имэйл">
+          <textarea name="message" rows="5" placeholder="Таны мессеж" aria-label="Таны мессеж"></textarea>
+          <input type="hidden" name="_subject" value="SICTON Robocon — Холбоо барих">
+          <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+          <button class="btn" type="submit">Илгээх</button>
+        </form>
+      </div>
 
-        <textarea name="message" rows="5" placeholder="Таны мессеж" aria-label="Таны мессеж"></textarea>
-
-        <!-- Нэмэлт: имэйл subject (Formspree-д харагдана) -->
-        <input type="hidden" name="_subject" value="SICTON Robocon — Холбоо барих">
-
-        <!-- Spam honeypot (ботуудаас хамгаална) -->
-        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-
-        <!-- Илгээсний дараах redirect (хүсвэл үлдээ, эсвэл устгаж болно) -->
-        <input type="hidden" name="_redirect" value="https://tanidomain.github.io/thanks.html">
-
-        <button class="btn" type="submit">Илгээх</button>
-      </form>
+      <!-- Баруун тал: мэдээлэл -->
+      <div class="panel">
+        <b>Байршил:</b> Мэдээлэл Холбоо Технологийн сургууль<br>
+        <b>Холбогдох утас:</b> +976 88983162<br>
+        <b>Сошиал хаяг:</b> <a href="https://www.instagram.com/must_sicton/">Instagram</a>
+        <hr style="border-color:rgba(255,255,255,.06)">
+        <p class="lead">Электроникийн салбарын бүх бакалаврын оюутнуудад нээлттэй бөгөөд туршлага шаардахгүй.</p>
+        <ul>
+          <li>Хэрэв та:</li>
+          <li>- Роботын механик хийц зохион бүтээх</li>
+          <li>- Электроник</li>
+          <li>- Програмчлал</li>
+          <li>зэрэгт сонирхолтой бол энэ бол таны ур чадвараа хөгжүүлэх хамгийн тохиромжтой газар.</li>
+        </ul>
+      </div>
     </div>
-
-    <!-- Баруун тал: мэдээлэл -->
-    <div class="panel">
-      <b>Байршил:</b> Мэдээлэл Холбоо Технологийн сургууль<br>
-      <b>Холбогдох утас:</b> +976 88983162<br>
-      <b>Сошиал хаяг:</b> <a href="https://www.instagram.com/must_sicton/">Instagram</a>
-      <hr style="border-color:rgba(255,255,255,.06)">
-      <p class="lead">Бид дизайн баримт бичиг, кодын сан, лог датаа нээлттэй байдлаар хуваалцахыг зорьдог.</p>
-    </div>
-  </div>
-</section>
-
-
+  </section>
 
   <footer>
     <div class="container">© <span id="y"></span> SICTON Robocon — Бүгдийн хүчээр боломжгүйг бүтээнэ.</div>
